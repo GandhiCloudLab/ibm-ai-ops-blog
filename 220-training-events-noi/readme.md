@@ -83,7 +83,7 @@ Create a folder with the version number `1` and create `raw` folder there.
 
 #### Copy NOI-Events file
 
-The sample events data file is available here [noi-alerts.json](https://github.com/GandhiCloudLab/ai-ops-guide-blog/tree/master/220-training-events-noi/files/1/raw/noi-alerts.json) for your reference.
+The sample events data file is available here [noi-alerts.json](https://github.com/GandhiCloudLab/ibm-ai-ops-blog/blob/master/220-training-events-noi/files/1/raw/noi-alerts.json) for your reference.
 
 Copy your events data for training into `raw` folder.
 
@@ -95,7 +95,7 @@ Ex:
 
 #### Copy Mapping file
 
-The NOI-events mapping file is available here [mapping.json](https://github.com/GandhiCloudLab/ibm-ai-ops-blog/tree/master/220-training-events-noi/files/1/mapping.json) for your reference.
+The NOI-events mapping file is available here [mapping.json](https://github.com/GandhiCloudLab/ibm-ai-ops-blog/blob/master/220-training-events-noi/files/1/mapping.json) for your reference.
 
 ```json
 {
