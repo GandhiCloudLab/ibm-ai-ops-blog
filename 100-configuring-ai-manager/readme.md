@@ -276,3 +276,18 @@ The below picture shows the `Insight Models` configured for the application.
 You can train the logs, incidents, events and etc.
 
 <img src="images/16-apps-insight-models.png">
+
+
+## References:
+
+IBM Knowledge Centre : https://www.ibm.com/support/knowledgecenter/en/SSQLRP_2.1/admin/aiops-admin-ovr.html
+
+#### Other related Articles
+
+Training Log anomaly models for AI Manager in Watson AIOps
+https://community.ibm.com/community/user/middleware/blogs/jeya-gandhi-rajan-m1/2021/02/10/training-log-anomaly-models-for-ai-manager
+
+Log Anomaly Detection by AI-Manager in Watson AI-Ops
+
+https://community.ibm.com/community/user/middleware/blogs/jeya-gandhi-rajan-m1/2021/02/14/log-anomaly-detection-by-ai-manager-in-w-ai-ops
+

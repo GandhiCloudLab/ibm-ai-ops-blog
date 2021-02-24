@@ -189,7 +189,7 @@ This is one time process.
 
 Need to modify the `mount_cos` datastore into `s3_datastore` in the training pod.
 
-Refer this article : abcd.com
+Refer Appendix section below.
 
 ### 3.7 Update Mapping file
 
@@ -263,7 +263,7 @@ Note: There should be four models in Elasticsearch (applications, pca_model, pca
 
 When there is an error during the training and you want to delete the training entry, then you can do that using DLaaS.
 
-Refer this article : abcd.com
+Refer Appendix section below.
 
 ## Quick Reference
 
@@ -287,3 +287,130 @@ curl -u $ES_USERNAME:$ES_PASSWORD -XGET https://$ES_ENDPOINT/_cat/indices  --ins
 Note: There should be four models in Elasticsearch (applications, pca_model, pca_fe, and templates).
 
 ```
+
+## Appendix
+
+### 1. Update S3 Datastore in Learner POD
+
+#### Update S3-Datastore in Learner POD
+
+This documentation explains about how to modify the `mount_cos` datastore into `s3_datastore` in the training pod.
+
+This update to be done before start the logs/etc training.
+
+You could see the error in the `learner` pod.
+
+<img src="images/01-error.png">
+
+#### Training POD
+
+Get into the training pod.
+
+```
+ oc exec -it $(oc get po |grep model-train-console|awk '{print $1}') bash
+```
+
+#### Get into the folder
+
+```
+cd /home/zeno/train/manifests/s3fs-pvc
+
+ls
+
+```
+
+The output could be like the below.
+
+```
+log_ingest.yaml
+event_group.yaml
+event_ingest.yaml
+log_anomaly_eval.yaml
+log_ingest_eval.yaml
+event_group_eval.yaml
+log_anomaly.yaml
+```
+
+#### Replace the datastore
+
+1. Open the above files one by one
+
+2. Find for text `mount_cos`
+
+<img src="images/02-find.png">
+
+3. Replace it with `s3_datastore`
+
+<img src="images/03-replace.png">
+
+### 2. DLaaS (Deep Learning as a Service)
+
+DLaaS helps to cleanup if any error occured during the logs training.
+
+#### Training POD
+
+DLaaS commands to be run inside the training POD.
+
+Here is the command to get into the training pod.
+
+```
+ oc exec -it $(oc get po |grep model-train-console|awk '{print $1}') bash
+```
+
+#### dlaas ls
+
+This command lists all trainings done so far.
+
+```
+<user1>$ dlaas ls
+```
+
+The output could be like the below.
+
+```
+ID                 NAME        FRAMEWORKS                    STATUS    START                         COMPLETED 
+training--J3iZj1Gg Log Ingest  data-preprocessing-mtworkflow           2020-12-18 07:08:05 +0000 UTC 2020-12-18 07:11:12 +0000 UTC
+training-yD3OZjJGR Log Anomaly log-anomaly-training                    2020-12-18 07:12:27 +0000 UTC 2020-12-18 07:14:58 +0000 UTC
+training-hwqOZC1GR Log Anomaly log-anomaly-training                    2020-12-18 07:12:28 +0000 UTC 2020-12-18 07:17:15 +0000 UTC
+training-DkeOWCJMR Log Anomaly log-anomaly-training                    2020-12-18 07:12:28 +0000 UTC 2020-12-18 07:20:03 +0000 UTC
+training-U3cbGK-Mg Log Ingest  data-preprocessing-mtworkflow           2021-01-05 04:19:04 +0000 UTC 2021-01-05 04:22:13 +0000 UTC
+training-oQ5lGF-MR Log Anomaly log-anomaly-training                    2021-01-05 04:23:26 +0000 UTC 2021-01-05 04:26:12 +0000 UTC
+training-97tlMKaGg Log Anomaly log-anomaly-training                    2021-01-05 04:23:27 +0000 UTC 2021-01-05 04:27:37 +0000 UTC
+```
+
+#### dlaas delete
+
+This command delete the mentioned trainings.
+
+```
+dlaas delete training-obRpLKaGg training-ZmzpYK-Mg
+```
+
+##  Reference
+
+### 1. MinIO Client Complete Guide
+
+aws s3 commands are available here.
+
+https://docs.min.io/docs/minio-client-complete-guide.html
+
+
+### 2. Knowledge center documentation
+The reference to the knowledge center documentation is available here.
+
+https://www.ibm.com/support/knowledgecenter/en/SSQLRP_2.1/train/aiops-train-model-ovr.html
+
+https://www.ibm.com/support/knowledgecenter/en/SSQLRP_2.1/train/aiops-train-model-la.html
+
+
+### 3. Other related Articles
+
+Configuring AI-Manager in Watson AI-Ops
+
+https://community.ibm.com/community/user/middleware/blogs/jeya-gandhi-rajan-m1/2021/02/09/configuring-ai-manager-in-watson-ai-ops
+
+
+Log Anomaly Detection by AI-Manager in Watson AI-Ops
+
+https://community.ibm.com/community/user/middleware/blogs/jeya-gandhi-rajan-m1/2021/02/14/log-anomaly-detection-by-ai-manager-in-w-ai-ops
+
