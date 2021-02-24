@@ -341,11 +341,6 @@ The error logs received in LogDNA would be processed by AI-Manager and creates s
 
 The SRE would look into this story to understand more about the incident and work on this to solve the issue.
 
-
-## Conclusion
-
-By using trained logs Model, AI-Manager is able to find log anomalies and alert SRE by creating incident as a slack story.
-
 ## Note
 
 Instead of using LogDNA here, we can use Humio as well.
