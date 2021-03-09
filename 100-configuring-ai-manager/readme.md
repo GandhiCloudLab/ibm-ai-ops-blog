@@ -135,11 +135,54 @@ Click on the `...` link to see details of the `ASM` integration.
 
 #### 2.2.1 ASM (Netcool Agile Service Manager) Configuration
 
-Here is the configuration of the `ASM`
+Here is the configuration of the `ASM`. The details to each field is given below the picture.
 
 <img src="images/10-appgroup-int-edit1.png">
 <img src="images/10-appgroup-int-edit2.png">
 <img src="images/10-appgroup-int-edit3.png">
+
+
+#### User ID and Password
+
+Search for `secret` contains name `topology-asm-credentials`
+
+You can find the username and password from there.
+
+Ex: 
+
+username : noi-topology-aiops21-user
+
+#### URL
+
+Topology URL : https://eventmgrinst-topology-topology.devaiops.svc:8080
+Layout URL : https://eventmgrinst-topology-layout.devaiops.svc:7084
+Merge Service URL : https://eventmgrinst-topology-merge.devaiops.svc:7082
+Search URL : https://eventmgrinst-topology-search.devaiops.svc:7080
+UI URL : https://netcool.eventmgrinst.aa-4aaaa.us-south.containers.appdomain.cloud 
+UI API URL : https://eventmgrinst-topology-ui-api.devaiops.svc:3080
+
+
+Here
+- devaiops -> namespace where ai-ops installed
+- eventmgrinst -> ai-manager instance id
+- aa-4aaaa.us-south.containers.appdomain.cloud -> cluster URL
+
+#### Certificate
+
+1. Get into a shell of the pod contains `topology-topology`
+
+```bash
+ oc exec -it $(oc get po| grep topology-topology |awk '{print $1}') bash
+```
+
+2. Run the below command to print the certificate.
+
+```bash
+cat \{CA_CERTIFICATE_NAME\}-00
+```
+
+Copy the certificate and use it 
+
 
 ### 2.3 Application at Application Group Level
 
