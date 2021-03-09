@@ -142,7 +142,7 @@ Here is the configuration of the `ASM`. The details to each field is given below
 <img src="images/10-appgroup-int-edit3.png">
 
 
-#### User ID and Password
+#### a) User ID and Password
 
 Search for `secret` contains name `topology-asm-credentials`
 
@@ -152,22 +152,21 @@ Ex:
 
 username : noi-topology-aiops21-user
 
-#### URL
+#### b) URLs
 
-Topology URL : https://eventmgrinst-topology-topology.devaiops.svc:8080
-Layout URL : https://eventmgrinst-topology-layout.devaiops.svc:7084
-Merge Service URL : https://eventmgrinst-topology-merge.devaiops.svc:7082
-Search URL : https://eventmgrinst-topology-search.devaiops.svc:7080
-UI URL : https://netcool.eventmgrinst.aa-4aaaa.us-south.containers.appdomain.cloud 
-UI API URL : https://eventmgrinst-topology-ui-api.devaiops.svc:3080
-
+- Topology URL : https://eventmgrinst-topology-topology.devaiops.svc:8080
+- Layout URL : https://eventmgrinst-topology-layout.devaiops.svc:7084
+- Merge Service URL : https://eventmgrinst-topology-merge.devaiops.svc:7082
+- Search URL : https://eventmgrinst-topology-search.devaiops.svc:7080
+- UI URL : https://netcool.eventmgrinst.aa-4aaaa.us-south.containers.appdomain.cloud 
+- UI API URL : https://eventmgrinst-topology-ui-api.devaiops.svc:3080
 
 Here
 - devaiops -> namespace where ai-ops installed
 - eventmgrinst -> ai-manager instance id
 - aa-4aaaa.us-south.containers.appdomain.cloud -> cluster URL
 
-#### Certificate
+#### c) Certificate
 
 1. Get into a shell of the pod contains `topology-topology`
 
