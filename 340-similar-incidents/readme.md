@@ -79,7 +79,7 @@ Similar Incidents to be trained.
 
 Refer this article :
 
-https://community.ibm.com/community/user/middleware/blogs/jeya-gandhi-rajan-m1/2021/02/24/training-incidents-for-ai-manager-in-watson-ai-ops
+https://community.ibm.com/community/user/middleware/blogs/jeya-gandhi-rajan-m1/2021/02/23/training-incidents-for-ai-manager-in-watson-ai-ops
 
 ### 1.3 Log Anomaly Detection by AI-Manager 
 
