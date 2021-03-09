@@ -168,7 +168,7 @@ Here
 
 #### c) Certificate
 
-1. Get into a shell of the pod contains `topology-topology`
+1. Get into a shell of the pod that contains the name `topology-topology`
 
 ```bash
  oc exec -it $(oc get po| grep topology-topology |awk '{print $1}') bash
