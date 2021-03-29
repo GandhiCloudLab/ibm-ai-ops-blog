@@ -1,82 +1,56 @@
 {
     "similar_incidents": [
         {
-            "title": "ratings",
-            "incident_id": "fed6b7bf-f741-49d1-ab36-5d04e9a5c005",
+            "title": "ratings : service down",
+            "incident_id": "dfe4c8ec-h832-21s3-ab36-4d9539b1g333",
             "explanation": "Based on similarity from query and incidents",
-            "resolution": "Ratings Deployment was scaled to 0. Resolved by scaling up to 1: oc scale --replicas=1 deployment ratings-v1 -n bookinfo",
+            "resolution": "Check and make the replica right",
             "score": 0.15282331,
-            "url": "https://github.com/pirsoscom/aiops-demo/issues/2",
-            "started_at": "2019-09-11T07:57:58Z",
+            "url": "https://github.com/GandhiCloudLab/ibm-ai-ops-blog/issues/1",
+            "started_at": "2020-02-09T08:32:32Z",
             "actions": [
                 {
                     "action": {
                         "text": "scaled",
-                        "begin_offset": 23,
-                        "end_offset": 29
+                        "begin_offset": 12,
+                        "end_offset": 28
                     },
                     "components": [
                         {
                             "text": "Ratings Deployment",
                             "begin_offset": 0,
-                            "end_offset": 18
+                            "end_offset": 12
                         }
                     ]
                 }
             ],
-            "incident_number": "BOK0000164"
+            "incident_number": "BACD989493"
         },
         {
-            "title": "GET /ratings/",
-            "incident_id": "fed6b7bf-f741-49d1-ab36-5d04e9a5c004",
+            "title": "ratings : Abnormal behavior",
+            "incident_id": "dfe4c8ec-h832-21s3-ab36-4d9539b1g333",
             "explanation": "Based on similarity from query and incidents",
-            "resolution": "Ratings Deployment was scaled to 0. Resolved by scaling up to 1: oc scale --replicas=1 deployment ratings-v1 -n bookinfo",
-            "score": 0.1409982,
-            "url": "https://github.com/pirsoscom/aiops-demo/issues/2",
+            "resolution": "Check and make the replica of ratings deployment to 1 atleast",
+            "score": 0.23453721,
+            "url": "https://github.com/GandhiCloudLab/ibm-ai-ops-blog/issues/1",
             "started_at": "2019-09-11T07:57:58Z",
             "actions": [
                 {
                     "action": {
                         "text": "scaled",
-                        "begin_offset": 23,
-                        "end_offset": 29
+                        "begin_offset": 12,
+                        "end_offset": 28
                     },
                     "components": [
                         {
                             "text": "Ratings Deployment",
                             "begin_offset": 0,
-                            "end_offset": 18
+                            "end_offset": 12
                         }
                     ]
                 }
             ],
-            "incident_number": "BOK0000163"
-        },
-        {
-            "title": "Alert Name: \"BookinfoProblem\" Alert Description: \"resource.name=\"ratings\" severity=Critical resource.hostname=ratings type.eventType=\"bookinfo\"\"",
-            "incident_id": "fed6b7bf-f741-49d1-ab36-5d04e9a5c005",
-            "explanation": "Based on similarity from query and incidents",
-            "resolution": "Ratings Deployment was scaled to 0. Resolved by scaling up to 1: oc scale --replicas=1 deployment ratings-v1 -n bookinfo",
-            "score": 0.11273798,
-            "url": "https://github.com/pirsoscom/aiops-demo/issues/2",
-            "started_at": "2019-09-11T07:57:58Z",
-            "actions": [
-                {
-                    "action": {
-                        "text": "scaled",
-                        "begin_offset": 23,
-                        "end_offset": 29
-                    },
-                    "components": [
-                        {
-                            "text": "Ratings Deployment",
-                            "begin_offset": 0,
-                            "end_offset": 18
-                        }
-                    ]
-                }
-            ],
-            "incident_number": "BOK0000164"
+            "incident_number": "BACD989423"
         }
     ]
 }
