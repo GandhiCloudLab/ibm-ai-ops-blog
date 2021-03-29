@@ -1,0 +1,60 @@
+{
+    "story": {
+        "action": "CHANGE",
+        "created_at": "2021-03-29T13:50:09Z",
+        "description": "New group related changes in existing story identified",
+        "event_group": {
+            "events": [
+                {
+                    "closed_at": "0001-01-01T00:00:00Z",
+                    "created_at": "2021-03-29T13:42:20Z",
+                    "description": "Unknown_normal: 1",
+                    "details": {
+                        "type": "anomaly",
+                        "updated_at": "2021-03-29T13:50:00",
+                        "count_vector": [
+                            5,
+                            2,
+                            0
+                        ],
+                        "template_ids": [
+                            "Unknown_normal",
+                            "Unknown_error",
+                            "3fb917b8"
+                        ],
+                        "end_timestamp": 1617025340000,
+                        "template_list": [
+                            "Unknown_normal",
+                            "Unknown_error",
+                            "2021-03-21 <NUM>:<NUM>:<NUM>.<NUM> frontwebservice info : <*> Retrieved for Customer : <NUM>"
+                        ],
+                        "start_timestamp": 1617025330000,
+                        "anomaly_duplications": {
+                            "ac665f3e-9095-11eb-b9cc-2a7a84175224": [
+                                "86f85fbe-b1d3-3077-a8a2-4f32cb7b0d4d",
+                                "6b947c02-4629-3a41-bfa7-284b21982e13",
+                                "521c84f1-1d0b-3a3f-a390-e48ef5bcf1b9"
+                            ]
+                        },
+                        "expected_count_vector": [
+                            0,
+                            0,
+                            1
+                        ],
+                        "log_anomaly_confidence": 0.9997
+                    },
+                    "id": "d289c367-44f9-33ce-aabf-68e43085832f",
+                    "severity": 4,
+                    "state": "TRIGGERED",
+                    "summary": "Abnormal behavior found in component: container-frontweb"
+                }
+            ],
+            "type": "TEMPORAL"
+        },
+        "id": "ad083f5c-9095-11eb-b9cc-2a7a84175224",
+        "severity": 4,
+        "status": "OPEN",
+        "title": "Changes in story identified",
+        "updated_at": "2021-03-29T13:51:20Z"
+    }
+}

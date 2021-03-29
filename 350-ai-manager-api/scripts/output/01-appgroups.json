@@ -1,0 +1,43 @@
+{
+    "application_groups": [
+        {
+            "applications": [
+                {
+                    "created_at": "2021-02-16T05:35:12Z",
+                    "description": "bookinfo",
+                    "id": "sglve7ly",
+                    "name": "bookinfo",
+                    "updated_at": "2021-02-16T05:35:12Z"
+                },
+                {
+                    "created_at": "2021-03-05T10:16:26Z",
+                    "description": "TrainTickets",
+                    "id": "3juttoy7",
+                    "name": "train-ticket",
+                    "updated_at": "2021-03-05T10:16:26Z"
+                }
+            ],
+            "created_at": "2021-02-16T04:58:59Z",
+            "description": "Financial Applications of GSI Lab",
+            "id": "9aemlr67",
+            "name": "Financial Apps",
+            "updated_at": "2021-02-16T04:58:59Z"
+        },
+        {
+            "applications": [
+                {
+                    "created_at": "2021-03-22T10:09:30Z",
+                    "description": "iLender",
+                    "id": "kvxrsdev",
+                    "name": "iLender",
+                    "updated_at": "2021-03-22T10:09:30Z"
+                }
+            ],
+            "created_at": "2021-03-22T10:09:09Z",
+            "description": "FinTech Apps",
+            "id": "qqja5t1a",
+            "name": "FinTech Apps",
+            "updated_at": "2021-03-22T10:09:09Z"
+        }
+    ]
+}

@@ -1,0 +1,44 @@
+{
+    "stories": [
+        {
+            "action": "CHANGE",
+            "created_at": "2021-03-29T13:49:59Z",
+            "description": "New group related changes in existing story identified",
+            "id": "a7689588-9095-11eb-9cd5-2a7a84175224",
+            "severity": 4,
+            "status": "OPEN",
+            "title": "Changes in story identified",
+            "updated_at": "2021-03-29T13:53:57Z"
+        },
+        {
+            "action": "CREATE",
+            "created_at": "2021-03-29T13:49:44Z",
+            "description": "New Group and a corresponding Story created",
+            "id": "9e910cba-9095-11eb-8489-2a7a84175224",
+            "severity": 5,
+            "status": "OPEN",
+            "title": "New Story created",
+            "updated_at": "2021-03-29T13:49:44Z"
+        },
+        {
+            "action": "CHANGE",
+            "created_at": "2021-03-29T13:52:14Z",
+            "description": "New group related changes in existing story identified",
+            "id": "f7aaa0f4-9095-11eb-b04a-2a7a84175224",
+            "severity": 3,
+            "status": "OPEN",
+            "title": "Changes in story identified",
+            "updated_at": "2021-03-29T13:53:52Z"
+        },
+        {
+            "action": "CHANGE",
+            "created_at": "2021-03-29T13:50:09Z",
+            "description": "New group related changes in existing story identified",
+            "id": "ad083f5c-9095-11eb-b9cc-2a7a84175224",
+            "severity": 4,
+            "status": "OPEN",
+            "title": "Changes in story identified",
+            "updated_at": "2021-03-29T13:51:20Z"
+        }
+    ]
+}
